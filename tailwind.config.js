@@ -5,6 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      '2xl':  '1536px',
+      'xl':  '1280px',
+      'lg':  '1024px',
+      'md':  '768px',
+      'sm': '640px',
+      'xs': {'max': '480px'},
+
+    },
     extend: {
       colors: {
         "black": "#040711",

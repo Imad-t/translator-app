@@ -74,11 +74,10 @@ const speakText = (text, lang) => {
 const sqrBtnStyle ="border-3 border-darkgray rounded-xl p-2 mr-3 hover:bg-skyblue"
 
   return (
-    <div className="bg-[url('./assets/hero_img.jpg')] h-fit min-h-screen bg-black bg-contain bg-no-repeat flex flex-col justify-center items-center gap-4 xl:flex-row xl:px-12 py-44 relative">
-      <img src={logo} className="absolute top-20" />
+    <div className="bg-[url('./assets/hero_img.jpg')] h-fit min-h-screen bg-black bg-contain xs:bg-cover xs:bg-center bg-no-repeat flex flex-col justify-center items-center gap-4 xl:flex-row xl:px-12 py-44 xs:py-24 relative">
+      <img src={logo} className="absolute top-20 xs:top-6" />
       <div className="bg-input w-11/12 lg:w-5/6 h-80 border-solid border border-darkgray rounded-3xl grid grid-rows-5 p-5">
-        <div className="row-span-1 text-lightgray text-sm flex font-semibold gap-8 pb-3 px-3 border-b-2 border-border">
-          <button onClick={() => setFrom("detect")}>Detect Language</button>
+        <div className="row-span-1 text-lightgray text-sm flex font-semibold gap-8 xs:gap-2 xs:text-xs pb-3 px-3 border-b-2 border-border">
           <button
             onClick={() => setFrom("en")}
             className={from === "en" ? selectedClass : notSelectedClass}
@@ -153,7 +152,7 @@ const sqrBtnStyle ="border-3 border-darkgray rounded-xl p-2 mr-3 hover:bg-skyblu
 
       <div className="bg-output w-11/12 lg:w-5/6 h-80 border-solid border border-darkgray rounded-3xl grid grid-rows-5 p-5">
         <div className="row-span-1 text-lightgray text-sm flex justify-between items-center font-semibold pb-3 px-3 border-b-2 border-border">
-          <div className="flex gap-8 h-full">
+          <div className="flex gap-8 xs:gap-2 xs:text-xs h-full">
             <button
               onClick={() => setTo("en")}
               className={to === "en" ? selectedClass : notSelectedClass}
